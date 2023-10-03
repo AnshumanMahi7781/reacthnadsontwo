@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.MainContainer {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #274060 74%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+
+form {
+  border: none;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.formRow {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formRow label {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.formRow input {
+  border: none;
+  outline: none;
+  padding: 1em;
+  width: 350px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.formRow input::placeholder {
+  color: tomato;
+}
+
+form button {
+  width: 225px;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  font-weight: bolder;
+  font-size: 14px;
+  background-color: lightgray;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: rgb(187, 186, 186);
+}
+
+.dataContainer {
+  border-top: 1px solid red;
+  width: 100%;
+  height: calc(100vh - 400px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2em;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.empData {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.555);
+  width: 45%;
+  font-weight: bolder;
+  font-size: 18px;
+  padding: 0.5em;
+  color: #ED0800;
+}
+
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .formRow {
+    padding: 0em 1em;
+    width: 100%;
+  }
+
+  .formRow label {
+    font-size: 16px;
+  }
+
+  .formRow input {
+
+    font-size: 16px;
+    width: 60%;
+  }
+  .dataContainer {
+
+    padding: 1em 0.5em;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .empData {
+    font-size: 15px;
+    width: 100%;
+    padding: 0.6em;
+  }
+
+}
