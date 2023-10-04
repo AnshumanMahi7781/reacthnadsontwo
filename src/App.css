@@ -10,43 +10,60 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
   overflow-y: auto;
-
 }
 
 
 form {
-  border: none;
-  width: 100%;
-  height: 400px;
+  align-self: center;
+  border: 2px solid rgba(255, 255, 255, 0.096);
+  background-color: rgba(224, 255, 255, 0.096);
+  border-radius: 10px;
+  width: 40%;
+  height: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.dataContainer {
+  background-color:#274060d2;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 1em;
+}
+
 .formRow {
-  width: 500px;
+  padding: 0em 1em;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .formRow label {
+  width: 175px;
   color: white;
   font-size: 20px;
   font-weight: bolder;
 }
 
-.formRow input {
+.formRow .inputBox {
+  width: 350px;
+}
+
+.inputBox input {
   border: none;
   outline: none;
   padding: 1em;
-  width: 350px;
+  width: 100%;
   background-color: transparent;
   border-bottom: 2px solid white;
   font-size: 18px;
@@ -55,8 +72,20 @@ form {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.formRow input::placeholder {
+
+.inputBox input::placeholder {
   color: tomato;
+}
+
+.inputBox .Error {
+  width: 100%;
+  background-color: tomato;
+  color: white;
+  font-style: italic;
+  font-weight: bolder;
+  padding: 0.2em 1em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 form button {
@@ -74,62 +103,76 @@ form button:hover {
   background-color: rgb(187, 186, 186);
 }
 
-.dataContainer {
-  border-top: 1px solid red;
+
+table {
   width: 100%;
-  height: calc(100vh - 400px);
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 2em;
-  flex-wrap: wrap;
-  gap: 15px;
-  overflow: hidden;
-  overflow-y: auto;
+  text-align: center;
+  font-size: 20px;
+  color: white;
 }
 
-.empData {
-  border-radius: 10px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.555);
-  width: 45%;
-  font-weight: bolder;
-  font-size: 18px;
-  padding: 0.5em;
+thead {
+  background-color: #130f40;
   color: #ED0800;
 }
 
+td,
+th {
+  font-size: 18px;
+  padding: 0.5em;
 
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .MainContainer {
+    flex-direction: column;
+
+  }
+  h2{
+    font-size: 18px;
   }
 
-  .formRow {
-    padding: 0em 1em;
-    width: 100%;
+  form {
+    width: 60%;
+    height: 650px;
   }
+
+
 
   .formRow label {
     font-size: 16px;
+    text-align: left;
   }
 
-  .formRow input {
 
-    font-size: 16px;
+  .inputBox {
     width: 60%;
   }
-  .dataContainer {
 
+  .dataContainer {
+    width: 100%;
     padding: 1em 0.5em;
     gap: 20px;
     justify-content: center;
+    height: calc(100vh - 450px);
+  }
+  .inputBox .Error {
+  font-size: 14px;
+  /* padding: 0 1em; */
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  form {
+    width: 100%;
+    height: 650px;
   }
 
-  .empData {
-    font-size: 15px;
-    width: 100%;
-    padding: 0.6em;
-  }
+
 
 }
+
+
