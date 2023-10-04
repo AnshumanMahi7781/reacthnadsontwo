@@ -90,6 +90,7 @@ form button:hover {
 
 .empData {
   border-radius: 10px;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.555);
   width: 45%;
   font-weight: bolder;
